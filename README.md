@@ -1,3 +1,2 @@
 # uprisemc.github.io
-Page >:D
-lol
+creds to alexkvazos https://www.mc-market.org/resources/4/
