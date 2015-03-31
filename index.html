@@ -13,7 +13,6 @@
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/shadowbox.css">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   
@@ -47,7 +46,7 @@
       <div class="icons" style="display:none">
         <p>
           <a class="icon" id="Reddit" href="//reddit.com/r/uprisemc"> <i class="fa fa-reddit"></i> </a>
-          <a class="icon" id="Vote" onclick="toggleMenu()"> <i class="fa fa-thumbs-o-up"></i> </a>
+          <a class="icon" id="VoteWAITWITHTHISUNTILWEHAVECONFIGURATEDVOTING"> <i class="fa fa-thumbs-o-up"></i> </a>
           <a class="icon" id="Store" href="//uprisemc.buycraft.net"> <i class="fa fa-dollar"></i> </a>
         </p>
 
@@ -66,7 +65,6 @@
       <script type="text/javascript" src="js/bootstrap.min.js"></script>
       <script type="text/javascript" src="js/uprise.js"></script>
       <script type="text/javascript" charset="utf-8" src="js/jquery.tubular.1.0.js"></script>
-      <script type="text/javascript" src="js/shadowbox.js"></script>
       <script type="text/javascript">
 
       ServerStatus('167.114.102.224:25613');
@@ -107,51 +105,6 @@
 
   ga('create', 'UA-61239539-1', 'auto');
   ga('send', 'pageview');
-          
-          Shadowbox.init({
-        skipSetup: true,
-        enableKeys: false,
-        displayNav: false,
-        handleOversize: "drag",
-        onFinish: function () {
-            if (Shadowbox.current !== 0) {
-                var a = $("<div/>").append($('<a href="#" class="left vote-control" style="left: 0; top: 50%;">&lsaquo;</a>')).click(function () {
-                    Shadowbox.previous();
-                });
-                $("#sb-body-inner").prepend(a);
-                a.fadeIn("slow");
-            }
-            if (Shadowbox.hasNext()) {
-                var b = $("<div/>").append($('<a href="#" class="right vote-control" style="right: 0; top: 50%;">&rsaquo;</a>')).click(function () {
-                    Shadowbox.next();
-                });
-                $("#sb-body-inner").prepend(b);
-                b.fadeIn("slow");
-            }
-        }
-    });
-
-    //Vote overlay
-    function loadVoteOverlay() {
-        if ("sandbox" in document.createElement("iframe")) {
-                Shadowbox.open([{
-                                player: "iframe",
-                                content: "http://minecraft-mp.com/server/78746/vote/",
-                                width: 1280,
-                                title: '<a href="http://minecraft-mp.com/server/78746/vote/" target="_blank">Minecraft Multiplayer</a>'
-                            },{
-                                player: "iframe",
-                                content: "http://minecraftservers.org/vote/219016",
-                                width: 1280,
-                                title: '<a href="http://minecraftservers.org/vote/219016" target="_blank">Minecraftservers.org</a>'
-                            },{
-                                player: "iframe",
-                                content: "http://minecraft-server-list.com/server/290885/vote/",
-                                width: 1280,
-                                title: '<a href="http://minecraft-server-list.com/server/290885/vote/" target="_blank">Minecraft Server List</a>'
-                            },])
-            }    }
-
       </script>
     </body>
     </html>
